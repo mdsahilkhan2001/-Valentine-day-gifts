@@ -44,12 +44,35 @@ export const useHeartCursor = () => {
             }
         }
 
+        // Touch support for mobile devices
+        const handleTouchMove = (e) => {
+            if (e.touches.length > 0) {
+                const touch = e.touches[0]
+                if (Math.random() > 0.5) {
+                    createHeart(touch.clientX, touch.clientY)
+                }
+            }
+        }
+
+        const handleTouchStart = (e) => {
+            if (e.touches.length > 0) {
+                const touch = e.touches[0]
+                for (let i = 0; i < 5; i++) {
+                    setTimeout(() => createHeart(touch.clientX, touch.clientY), i * 50)
+                }
+            }
+        }
+
         window.addEventListener('mousemove', handleMouseMove)
         window.addEventListener('click', handleClick)
+        window.addEventListener('touchmove', handleTouchMove, { passive: true })
+        window.addEventListener('touchstart', handleTouchStart, { passive: true })
 
         return () => {
             window.removeEventListener('mousemove', handleMouseMove)
             window.removeEventListener('click', handleClick)
+            window.removeEventListener('touchmove', handleTouchMove)
+            window.removeEventListener('touchstart', handleTouchStart)
         }
     }, [])
 
