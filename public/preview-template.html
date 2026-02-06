@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine Preview</title>
+    <style>
+        body {
+            margin: 0;
+            width: 1200px;
+            height: 630px;
+            background: linear-gradient(135deg, #ffd6e5 0%, #ff9cc3 50%, #ff6fa5 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Georgia', serif;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .container {
+            text-align: center;
+            z-index: 2;
+        }
+
+        h1 {
+            font-size: 72px;
+            color: #fff;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            margin: 0;
+        }
+
+        .hearts {
+            position: absolute;
+            font-size: 60px;
+            opacity: 0.3;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(10deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hearts" style="top: 10%; left: 10%;">💖</div>
+    <div class="hearts" style="top: 20%; right: 15%; animation-delay: 1s;">💕</div>
+    <div class="hearts" style="bottom: 15%; left: 20%; animation-delay: 2s;">✨</div>
+    <div class="hearts" style="bottom: 20%; right: 10%; animation-delay: 1.5s;">💝</div>
+    <div class="container">
+        <h1>Will You Be<br>My Valentine? 💖</h1>
+    </div>
+</body>
+
+</html>

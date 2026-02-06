@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Playfair+Display:wght@600;700&family=Quicksand:wght@400;600&display=swap');
+
+:root {
+  font-family: 'Quicksand', system-ui, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #5b1238;
+  background-color: #fff5f8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #ffd6e5, #ff9cc3 55%, #ff6fa5 100%);
+  display: block;
+  overflow-x: hidden;
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><text y="24" font-size="24">💖</text></svg>') 16 16, auto;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button {
+  font-family: inherit;
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><text y="24" font-size="24">💕</text></svg>') 16 16, pointer;
+}
+
+a,
+input,
+.link-box {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><text y="24" font-size="24">💗</text></svg>') 16 16, pointer;
+}
